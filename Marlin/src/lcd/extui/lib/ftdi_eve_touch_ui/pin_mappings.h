@@ -160,7 +160,7 @@
     #error "This pin mapping requires Marlin."
   #endif
 
-  #define CLCD_MOD_RESET                 BTN_EN1
+  #define CLCD_MOD_RESET                 BTN_EN2
   #define CLCD_SPI_CS                    LCD_PINS_RS
 
   #ifdef EITHER(MB(FYSETC_CHEETAH), MB(FYSETC_CHEETAH_V12))

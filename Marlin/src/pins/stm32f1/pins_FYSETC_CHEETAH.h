@@ -171,7 +171,7 @@
 #endif
 
 #if ENABLED(TOUCH_UI_FTDI_EVE)
-  #define BTN_EN1                           EXPA1_08_PIN // TODO: Rename to BNT_EN2 when fix the SKR E3/DIP EXT1 mapping
+  #define BTN_EN2                           EXPA1_08_PIN
 
   #define LCD_PINS_RS                       EXPA1_04_PIN
   #define LCD_PINS_D4                       EXPA1_05_PIN

@@ -163,8 +163,8 @@
  *                 _____
  *             5V | 1 2 | GND
  *  (LCD_EN) PB7  | 3 4 | PB8  (LCD_RS)
- *  (LCD_D4) PB9  | 5 6   PA10 (BTN_EN2)
- *          RESET | 7 8 | PA9  (BTN_EN1)
+ *  (LCD_D4) PB9  | 5 6   PA10 (BTN_EN1)
+ *          RESET | 7 8 | PA9  (BTN_EN2)
  * (BTN_ENC) PB6  | 9 10| PA15 (BEEPER)
  *                 -----
  *                 EXP1
@@ -186,8 +186,8 @@
     #define BEEPER_PIN              EXPA1_10_PIN
 
     #define BTN_ENC                 EXPA1_09_PIN
-    #define BTN_EN1                 EXPA1_08_PIN
-    #define BTN_EN2                 EXPA1_06_PIN
+    #define BTN_EN1                 EXPA1_06_PIN
+    #define BTN_EN2                 EXPA1_08_PIN
 
     #define LCD_PINS_RS             EXPA1_04_PIN
     #define LCD_PINS_ENABLE         EXPA1_03_PIN
@@ -272,7 +272,7 @@
 
   #define BEEPER_PIN                EXPA1_09_PIN
 
-  #define BTN_EN1                   EXPA1_08_PIN
+  #define BTN_EN2                   EXPA1_08_PIN
   #define LCD_PINS_RS               EXPA1_04_PIN
 
 #endif // TOUCH_UI_FTDI_EVE && LCD_FYSETC_TFT81050
