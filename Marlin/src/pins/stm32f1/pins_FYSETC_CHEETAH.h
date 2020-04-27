@@ -171,9 +171,15 @@
 #endif
 
 #if ENABLED(TOUCH_UI_FTDI_EVE)
+  #define BEEPER_PIN                        EXPA1_10_PIN
+
   #define BTN_EN2                           EXPA1_08_PIN
 
-  #define LCD_PINS_RS                       EXPA1_04_PIN
-  #define LCD_PINS_D4                       EXPA1_05_PIN
-  #define LCD_PINS_ENABLE                   EXPA1_03_PIN
+  #define CLCD_SPI_BUS 2
+  //#define CLCD_USE_SOFT_SPI
+  #if ENABLED(CLCD_USE_SOFT_SPI)
+    #define LCD_PINS_RS                     EXPA1_04_PIN
+    #define LCD_PINS_D4                     EXPA1_07_PIN
+    #define LCD_PINS_ENABLE                 EXPA1_05_PIN
+  #endif
 #endif

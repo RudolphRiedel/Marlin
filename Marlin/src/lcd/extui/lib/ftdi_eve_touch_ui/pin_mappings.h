@@ -162,15 +162,19 @@
 
   #define CLCD_MOD_RESET                 BTN_EN2
   #define CLCD_SPI_CS                    LCD_PINS_RS
+#endif
 
-  #ifdef EITHER(MB(FYSETC_CHEETAH), MB(FYSETC_CHEETAH_V12))
+#ifdef CHEETAH_TFT_PINMAP
+  #ifndef __MARLIN_FIRMWARE__
+    #error "This pin mapping requires Marlin."
+  #endif
 
-    #define CLCD_SPI_BUS 2
-    //#define CLCD_USE_SOFT_SPI
-    #if ENABLED(CLCD_USE_SOFT_SPI)
-      #define CLCD_SOFT_SPI_MOSI         LCD_PINS_ENABLE
-      #define CLCD_SOFT_SPI_MISO         EXPA1_07_PIN
-      #define CLCD_SOFT_SPI_SCLK         LCD_PINS_D4
-    #endif
+  #define CLCD_MOD_RESET                 BTN_EN2
+  #define CLCD_SPI_CS                    LCD_PINS_RS
+
+  #if ENABLED(CLCD_USE_SOFT_SPI)
+    #define CLCD_SOFT_SPI_MOSI           LCD_PINS_ENABLE
+    #define CLCD_SOFT_SPI_MISO           LCD_PINS_RS
+    #define CLCD_SOFT_SPI_SCLK           LCD_PINS_D4
   #endif
 #endif
